@@ -57,3 +57,8 @@ add it to a new deck! The default setup (first field as front of card,
 second field as back) should be fine.
 
 Happy studying!
+
+Note: Anki by default will refuse to add duplicate words to an existing
+deck, so as you continue on your duolingo journey you should be able to
+re-run this whole process and add only the new words to your existing
+deck.
