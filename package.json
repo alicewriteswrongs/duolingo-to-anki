@@ -11,6 +11,7 @@
   "dependencies": {
     "chalk": "^1.1.3",
     "csv": "^1.1.1",
-    "google-translate-api": "arthurlacoste/google-translate-api"
+    "google-translate-api": "arthurlacoste/google-translate-api",
+    "standard": "^10.0.2"
   }
 }
