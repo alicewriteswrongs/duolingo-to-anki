@@ -4,7 +4,7 @@
 [anki](https://apps.ankiweb.net/index.html) is nice too! Wouldn't it be
 great if they would play well together?
 
-Well, now they sort of do. This repo contains a little function to scrape
+Well, now they sort of can. This repo contains a little function to scrape
 all the words you've seen off of Duolingo and dump them into JSON, and
 a simple node.js script that will translate all the words and write them
 into a CSV which can be imported into Anki. Hooray!
