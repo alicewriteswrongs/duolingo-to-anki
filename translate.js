@@ -13,24 +13,24 @@ program
   .option('-t, --to <code>', 'target language (defaults to English)')
   .option('-f, --from <code>', 'source language (defaults to guessing)')
   .option('-j, --json <path>', 'path to JSON file containing words to translate')
-  .parse(process.argv);
+  .parse(process.argv)
 
-if (! program.json ) {
-  program.help();
+if (!program.json) {
+  program.help()
 } else {
-  let words = JSON.parse(String(fs.readFileSync(program.json)));
+  let words = JSON.parse(String(fs.readFileSync(program.json)))
 
   let translateOptions = { to: 'en' }
 
-  if ( program.to ) {
+  if (program.to) {
     translateOptions.to = program.to
   }
 
-  if ( program.from ) {
+  if (program.from) {
     translateOptions.from = program.from
   }
 
-  console.log('translating...');
+  console.log('translating...')
 
   Promise.all(words.map(word => {
     return translate(word, translateOptions)
@@ -42,7 +42,7 @@ if (! program.json ) {
   })).then(translated => {
     console.log('done translating ✔\n')
 
-    let newFilename = csvFilename(program.json);
+    let newFilename = csvFilename(program.json)
     console.log(`writing translations to ${newFilename}...`)
 
     stringify(translated, (err, output) => { // eslint-disable-line
