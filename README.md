@@ -11,7 +11,7 @@ into a CSV which can be imported into Anki. Hooray!
 
 ## Setup and usage
 
-To set things up you're going to wanna do
+Do this:
 
 ```
 yarn install --pure-lockfile
