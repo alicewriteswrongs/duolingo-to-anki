@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "csv": "^1.1.1",
     "google-translate-api": "arthurlacoste/google-translate-api"
   }
 }
