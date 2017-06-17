@@ -35,7 +35,7 @@ if (!program.json) {
   Promise.all(words.map(word => {
     return translate(word, translateOptions)
       .then(res => {
-        console.log(`translating ${chalk.magenta(word)} to ${chalk.blue(res.text)}`)
+        console.log(`translated ${chalk.magenta(word)} to ${chalk.blue(res.text)}`)
         return [word, res.text]
       })
       .catch(console.error)
