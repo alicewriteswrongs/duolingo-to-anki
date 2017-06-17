@@ -48,13 +48,23 @@ Then, assuming you've had no issues with the above, you should be able to
 just do:
 
 ```sh
-node ./translate.js words.json
+node translate.js --json words.json
 ```
 
 And it will write a file called `words.csv` to the current directory. This
 can be directly imported in Anki, by doing file -> import. Make sure you
 add it to a new deck! The default setup (first field as front of card,
 second field as back) should be fine.
+
+By default `translate.js` will guess the source language and will use
+`'en'` as the target language. You will usually get better translations if
+you specify the source language, and of course if you want a language
+other than English as the target you will need to do that to! The `--from`
+and `--to` CLI flags will let you do that:
+
+```js
+node translate.js --from fr --to en --json words.json
+```
 
 Happy studying!
 
