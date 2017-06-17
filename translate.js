@@ -13,8 +13,10 @@ if (process.argv.length < 3) {
 } else {
   let words = JSON.parse(String(fs.readFileSync(process.argv[2])))
 
+  console.log('translating...');
+
   Promise.all(words.map(word => {
-    return translate(word, { to: 'en' })
+    return translate(word, { to: 'en', from: 'fr' })
       .then(res => {
         console.log(`translating ${chalk.magenta(word)} to ${chalk.blue(res.text)}`)
         return [word, res.text]
