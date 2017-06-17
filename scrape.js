@@ -8,3 +8,6 @@ let scrape = () => {
   return [...table.querySelectorAll('.word-cell')]
     .map(node => node.querySelector('.hidden').textContent)
 }
+
+let words = JSON.stringify(scrape())
+console.log(words)
