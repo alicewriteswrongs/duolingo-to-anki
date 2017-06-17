@@ -57,10 +57,11 @@ add it to a new deck! The default setup (first field as front of card,
 second field as back) should be fine.
 
 By default `translate.js` will guess the source language and will use
-`'en'` as the target language. You will usually get better translations if
-you specify the source language, and of course if you want a language
-other than English as the target you will need to do that too! The
-`--from` and `--to` CLI flags will let you do that:
+`'en'` as the target language. Google translate is pretty good at guessing
+the source language, but you will usually get better translations if you
+specify it manually, and of course if you want a language other than
+English as the target you will need to do that too! The `--from` and
+`--to` CLI flags will let you do that:
 
 ```js
 node translate.js --from fr --to en --json words.json
