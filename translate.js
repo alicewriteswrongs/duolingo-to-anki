@@ -32,14 +32,17 @@ if (!program.json) {
 
   console.log('translating...')
 
-  Promise.all(words.map(word => {
-    return translate(word, translateOptions)
-      .then(res => {
+  ;(async () => {
+    let translated = await Promise.all(words.map(async word => {
+      try {
+        let res = await translate(word, translateOptions)
         console.log(`translated ${chalk.magenta(word)} to ${chalk.blue(res.text)}`)
         return [word, res.text]
-      })
-      .catch(console.error)
-  })).then(translated => {
+      } catch (e) {
+        console.error(e)
+      }
+    }))
+
     console.log('done translating ✔\n')
 
     let newFilename = csvFilename(program.json)
@@ -49,5 +52,5 @@ if (!program.json) {
       fs.writeFileSync(newFilename, output)
       console.log(chalk.green('done!'))
     })
-  })
+  })()
 }
