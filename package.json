@@ -14,6 +14,7 @@
     "commander": "^2.9.0",
     "csv": "^1.1.1",
     "google-translate-api": "arthurlacoste/google-translate-api",
+    "prettier": "^1.5.3",
     "standard": "^10.0.2"
   }
 }
