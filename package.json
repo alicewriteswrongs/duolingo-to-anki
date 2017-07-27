@@ -4,8 +4,7 @@
   "description": "",
   "main": "scrape.js",
   "scripts": {
-    "lint": "standard",
-    "fmt": "standard --fix"
+    "fmt": "prettier --write --no-semi *.js"
   },
   "author": "",
   "license": "ISC",

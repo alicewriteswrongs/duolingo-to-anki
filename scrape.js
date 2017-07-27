@@ -3,10 +3,11 @@
 // eh, well, I think that will work anyway
 
 let scrape = () => {
-  let table = document.querySelector('#vocab-rows')
+  let table = document.querySelector("#vocab-rows")
 
-  return [...table.querySelectorAll('.word-cell')]
-    .map(node => node.querySelector('.hidden').textContent)
+  return [...table.querySelectorAll(".word-cell")].map(
+    node => node.querySelector(".hidden").textContent
+  )
 }
 
 let words = JSON.stringify(scrape())
